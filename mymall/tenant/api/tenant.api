@@ -1,0 +1,13 @@
+type (
+	AddTenantReq {
+		Name string `json:"name"`
+		Addr string `json:"addr"`
+	}
+	AddTenantRsp {
+		Id string `json:"id"`
+	}
+)
+service tenant {
+	@handler addTenant
+	post /api/tenant/addtenant(AddTenantReq) returns (AddTenantRsp)
+}

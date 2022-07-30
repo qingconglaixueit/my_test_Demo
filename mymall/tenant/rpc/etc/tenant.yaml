@@ -1,0 +1,9 @@
+Name: tenant.rpc
+ListenOn: 127.0.0.1:8088
+Etcd:
+  Hosts:
+  - 127.0.0.1:2379
+  Key: tenant.rpc
+
+DataSource: root:123456@tcp(localhost:3306)/test_demo
+Table: tenant_info

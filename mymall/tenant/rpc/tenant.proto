@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+package tenant;
+  
+option go_package = "./tenant";
+
+message TidReq {
+    string name = 1;
+}
+message TenantRsp {
+    // 租户名称
+    string id = 1;
+    // 租户名称
+    string name = 2;
+    // 用户地址
+    string addr = 3;
+}
+  
+message addTenantReq {
+    // 租户名称
+    string name = 1;
+    // 用户地址
+    string addr = 2;
+}
+
+
+message addTenantRsp {
+    // 租户 id
+    string id = 1;
+}
+
+
+  
+service Tenant {
+    rpc getTenant(TidReq) returns(TenantRsp);
+    rpc addTenant(addTenantReq) returns(addTenantRsp);
+}
