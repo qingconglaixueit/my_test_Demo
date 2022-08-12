@@ -1,0 +1,7 @@
+Name: user-api
+Host: 0.0.0.0
+Port: 9002
+DataSource: root:123456@tcp(localhost:3306)/test_demo
+Auth:
+  AccessSecret: secretoooppppoooo
+  AccessExpire: 3600

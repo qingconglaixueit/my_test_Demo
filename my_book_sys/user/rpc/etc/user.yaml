@@ -1,0 +1,9 @@
+Name: user.rpc
+ListenOn: 127.0.0.1:9003
+Etcd:
+  Hosts:
+  - 127.0.0.1:2379
+  Key: user.rpc
+Mysql:
+  DataSource: root:123456@tcp(localhost:3306)/test_demo
+  Table: user
